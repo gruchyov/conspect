@@ -1,0 +1,86 @@
+
+   Чтобы затянуть изменения с сервера - воспользоваться командой git pull.
+       Если Already up to date - на сервере самая свежая версия проекта.
+
+   
+   1 ситуация:
+             версии кода в локальном и удаленном репозитории одинаковые.
+                     все коммиты на сервере и компьютере одни и те же
+
+   2 ситуация:
+             локальная ситуация выше версии на сервере
+                  локальные изменения закоммичены но на сервер не отправлены
+                  Your branch is ahead of 'origin/master' by 2 commits.
+                  git push
+ 
+   3 ситуация:
+             версия локального репозитория младше версии на сервере
+                  самостоятельно изменил файл на сервере
+                  git status в командной строке этого не показывает
+                  git pull
+                  указыватся информация о всех проведённых изменениях:
+                   1 file changed, 1 insertion(+), 2 deletions(-) например
+
+
+          При работе в команде нужно всегда начинать работу с команды
+              git pull чтобы не столкнуться с конфликтом версий
+
+   Конфликт версий:
+             на сервере созданы одни коммиты а в локальном - другие
+
+ ПРОСТЫЕ, могут разрешиться автоматически самим гитом:
+     а) изменения в разных файлах
+        понять что есть конфликт можно понять в процессе работы над проектом
+        - git status -> Your branch is ahead of 'origin/master' by 1 commit          
+        -если git push чтобы оба репозитория были бы сохранены, ан НЕТ:
+
+       To https://github.com/gruchyov/git_conspectus.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/gruchyov/git_conspectus.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details
+                      rejected - отклонено
+                      failed to push some refs to - не удалось запушить
+Обновления были отклонены, так как удаленный содержит работу, которую вы делаете
+нет локально. Обычно это вызвано отправкой другого репозитория.
+к тому же исх. Вы можете сначала интегрировать удаленные изменения
+(например, «git pull ...») перед повторным нажатием.
+см. «Примечание о быстрой перемотке вперед» в «git push --help» для получения подробной информации.
+
+   ЧТОБЫ РАЗРЕШИТЬ КОНФЛИКТ
+     - сначала git pull
+     - получаем  Please enter a commit message to explain why this merge is necessary,
+                # especially if it merges an updated upstream into a topic branch.
+                #
+                # Lines starting with '#' will be ignored, and an empty message aborts
+                # the commit.
+   Результат слияния уже лежит в текущей рабочей копии.
+   О не закоммичен и чтобы его закоммитить гит предлагает его закоммитить по умолчанию.
+   Мы изменять сообщение по умолчанию не будем, а просто выйжем из этого редактора
+   введя команду
+        :wq
+   Эта команда сохраняет сообщение коммита.
+       Можно просто
+               :q - тогда сообщение коммита будет установлено по умолчанию, если оно 
+                    случайно отредактировано
+
+Мы вводим :wq
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
