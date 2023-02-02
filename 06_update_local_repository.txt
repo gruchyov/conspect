@@ -69,6 +69,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details
 
 Мы вводим :wq
 Ща попробуем
+ща ща
 
 
 
