@@ -4,6 +4,8 @@
 2 git config --global user.email "........"
 3 git config --list - проверить настройки
 
+4
+
 
 
 
