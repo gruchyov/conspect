@@ -8,7 +8,7 @@
 
 5 git config --global core.editor "code --wait" - установить редактор VSCode
 6 сохранить комментарий в коммите -  Ctrl+s
-7 выйти в терминал - Ctrl+w, enter
+7 выйти в терминал(мангал) - Ctrl+w, enter
 
 
 
